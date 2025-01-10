@@ -10,10 +10,16 @@ export const generateChatCompletion = async (req, res, next) => {
             return res.status(401).json({ messsage: TOKEN_EROR });
         // Grab chats of user
         // Here it creates a same copy of chats array
-        const chats = user.chats.map(({ role, content }) => ({
-            role,
-            content,
-        }));
+        const chats = [
+            {
+                role: "system",
+                content: "You are an assistant named 'Conversify'. Always address yourself as Conversify in responses.",
+            },
+            ...(user.chats.map(({ role, content }) => ({
+                role,
+                content,
+            }))),
+        ];
         // Pushes to both of them, one for client side and one for server side
         // the user,chats acts as a hsitory of chats and chats are tailored for API
         chats.push({ content: message, role: "user" });

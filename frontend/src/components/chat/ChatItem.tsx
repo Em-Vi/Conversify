@@ -43,14 +43,14 @@ const ChatItem = ({
       sx={{
         display: "flex",
         p: 2,
-        bgcolor: "#004d5612",
+        bgcolor: "#1E1E1E",
         my: 1,
         gap: 2,
         borderRadius: 2,
       }}
     >
-      <Avatar sx={{ ml: "0" }}>
-        <img src="openai.png" alt="openai" width={"30px"} />
+      <Avatar sx={{ ml: "0" ,bgcolor:"black"}}>
+        <img src="Conversify.png" alt="openai" width={"30px"} />
       </Avatar>
       {/* You can also copy this to user chat */}
       <Box>
@@ -71,7 +71,7 @@ const ChatItem = ({
       </Box>
     </Box>
   ) : (
-    <Box sx={{ display: "flex", p: 2, bgcolor: "#004d56", gap: 2, borderRadius: 2 }}>
+    <Box sx={{ display: "flex", p: 2, bgcolor: "#333333", gap: 2, borderRadius: 2 }}>
       <Avatar sx={{ ml: "0", bgcolor: "white", color: "black" }}>
         {auth?.user?.name[0]}
       </Avatar>

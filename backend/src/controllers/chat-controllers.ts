@@ -17,10 +17,17 @@ export const generateChatCompletion = async (
     // Grab chats of user
 
     // Here it creates a same copy of chats array
-    const chats = user.chats.map(({ role, content }) => ({
-      role,
-      content,
-    })) as ChatCompletionRequestMessage[];
+    const chats = [
+      {
+        role: "system",
+        content:
+          "You are an assistant named 'Conversify'. Always address yourself as Conversify in responses.",
+      },
+      ...(user.chats.map(({ role, content }) => ({
+        role,
+        content,
+      }))),
+    ] as ChatCompletionRequestMessage[];
 
     // Pushes to both of them, one for client side and one for server side
     // the user,chats acts as a hsitory of chats and chats are tailored for API
@@ -84,9 +91,9 @@ export const deleteChats = async (
       return res.status(401).send("Credentials didn't match");
     }
     //@ts-ignore
-    user.chats = []
-    user.save()
-    return res.status(200).json({ message: "OK"});
+    user.chats = [];
+    user.save();
+    return res.status(200).json({ message: "OK" });
   } catch (error) {
     console.log(error);
     return res.status(200).json({ messsage: "ERROR", cause: error.message });

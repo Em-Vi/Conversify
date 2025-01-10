@@ -15,7 +15,7 @@ axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography:{
     fontFamily: "Roboto Slab,serif",
-    allVariants: {color:"white"},
+    allVariants: {color:"#A8A8A8"},
   },
 })
 

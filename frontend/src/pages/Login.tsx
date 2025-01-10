@@ -35,12 +35,9 @@ function Login() {
 
   return (
     <Box width={"100%"} height={"100%"} display={"flex"} flex={1}>
-      <Box padding={8} mt={8} display={{ md: "flex", sm: "none", xs: "none" }}>
-        <img src="airobot.png" alt="Robot" style={{ width: "400px" }} />
-      </Box>
       <Box
         display={"flex"}
-        flex={{ xs: 1, md: 0.5 }}
+        flex={1}
         justifyContent={"center"}
         alignItems={"center"}
         padding={2}
@@ -82,10 +79,11 @@ function Login() {
                 mt: 2,
                 width: "400px",
                 borderRadius: 2,
-                bgcolor: "#00fffc",
+                bgcolor: "#3A86FF",
+                color:"#E5E5E5",
                 ":hover": {
-                  bgcolor : "white",
-                  color: "black",
+                  bgcolor : "#E5E5E5",
+                  color: "#A8A8A8",
                 },
               }}
               endIcon={<IoIosLogIn/>}

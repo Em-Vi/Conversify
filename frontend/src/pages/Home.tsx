@@ -1,10 +1,8 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import TypingAnim from "../components/typer/TypingAnim";
 import Footer from "../components/footer/Footer";
 
 const Home = () => {
-  const theme = useTheme();
-  const isbelowMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box width={"100%"} height={"100%"} sx={{overflowX:"hidden"}}>
       <Box
@@ -16,7 +14,7 @@ const Home = () => {
           mx: "auto",
         }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "center"}}>
           <TypingAnim />
         </Box>
       </Box>
@@ -24,36 +22,20 @@ const Home = () => {
         sx={{
           width: "100%",
           display: "flex",
-          flexDirection: { md: "row", sm: "column", xs: "column" },
-          gap: 5,
-          my: 10,
+          flexDirection: { md: "column", sm: "column", xs: "column" },
+          gap: 0,
+          my: 5,
         }}
       >
         <img
-          src="robot.png"
-          alt="robot"
+          src="Conversify.png"
+          alt="conversify"
           style={{ width: "200px", margin: "auto" }}
         />
-        <img
-          className="image-inverted rotate"
-          src="openai.png"
-          alt="openai"
-          style={{ width: "200px", margin: "auto" }}
-        />
-        <Box sx={{ display: "flex", width: "100%", mx: "auto" }}>
-          <img
-            src="chat.png"
-            alt="chatbot"
-            style={{
-              display: "flex",
-              margin: "auto",
-              width: isbelowMd ? "80%" : "60%",
-              borderRadius: 20,
-              boxShadow: "-5px -5px 105px #64f3d5",
-              marginTop: 20,
-              marginBottom: 20,
-            }}
-          />
+        <Box sx={{ display: "flex", width: "100%", mx: "auto", justifyContent:"center" }}>
+          <Typography sx={{fontSize:100, textTransform:"uppercase",textAlign:"center",color:"#E5E5E5",fontFamily:"sans-serif"}}>
+            {"Conversify"}
+          </Typography>
         </Box>
       </Box>
       <Footer />

@@ -35,6 +35,14 @@ const Chat = () => {
     const chatData = await sendchatRequest(content);
     setChatMessages([...chatData.chats]);
   };
+  // Send data on clicking enter
+  const handleKeyPress = (e:React.KeyboardEvent<HTMLInputElement>) =>{
+    if(e.key == "Enter"){
+      e.preventDefault()
+      handleSubmit()
+    }
+  }
+
 
   // Clear Conversation
   const handleDeleteChats = async () => {
@@ -97,8 +105,8 @@ const Chat = () => {
           sx={{
             display: "flex",
             width: "100%",
-            height: "60vh",
-            bgcolor: "rgb(17,29,39)",
+            height: "70vh",
+            bgcolor: "#1E1E1E",
             borderRadius: 5,
             flexDirection: "column",
             mx: 3,
@@ -115,19 +123,21 @@ const Chat = () => {
           >
             {auth?.user?.name[0]}
           </Avatar>
-          <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
+          <Typography sx={{ mx: "auto", fontFamily: "work sans",my: 2, mt:2 }}>
             You are Talking with a ChatBot
           </Typography>
-          <Typography sx={{ mx: "auto", fontFamily: "work sans", my: 4, p: 3 }}>
-            You can ask anything to the ChatBot it will answer accordingly.
-            Caution: ChatBot can be wrong sometimes
+          <Typography sx={{ mx: "auto", fontFamily: "work sans", my: 2, p: 3,textAlign:"center" }}>
+            You can ask anything to the ChatBot it will answer accordingly
+          </Typography>
+          <Typography sx={{ mx: "auto", fontFamily: "work sans", my: 2, p: 3,textAlign:"center" }}>
+            Caution: AI can be wrong sometimes
           </Typography>
           <Button
           onClick={handleDeleteChats}
             sx={{
               width: "200px",
               fontWeight: 700,
-              color: "white",
+              color: "#A8A8A8",
               mx: "auto",
               my: "auto",
               bgcolor: red[300],
@@ -157,10 +167,10 @@ const Chat = () => {
             mx: "auto",
             fontWeight: 600,
             mb: 2,
-            color: "white",
+            color: "#A8A8A8",
           }}
         >
-          Model - GPT-4o-mini
+          CONVERSIFY
         </Typography>
         <Box
           sx={{
@@ -184,7 +194,7 @@ const Chat = () => {
           style={{
             width: "100%",
             borderRadius: 8,
-            backgroundColor: "rgb(17,27,39)",
+            backgroundColor: "#1E1E1E",
             display: "flex",
             margin: "auto",
           }}
@@ -192,13 +202,14 @@ const Chat = () => {
           {" "}
           <input
             ref={inputRef}
+            onKeyDown={handleKeyPress}
             style={{
               width: "100%",
               backgroundColor: "transparent",
               padding: "30px",
               border: "none",
               outline: "none",
-              color: "white",
+              color: "#A8A8A8",
               fontSize: "20px",
             }}
           />

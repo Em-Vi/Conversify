@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 
 function NotFound() {
@@ -18,7 +17,7 @@ function NotFound() {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "6rem", color: "white" }}>404</h1>
+      <h1 style={{ fontSize: "6rem", color: "#E5E5E5" }}>404</h1>
       <Typography sx={{ fontSize: "1.5rem", margin: "20px 0", color: "#555" }}>
         Oops! The page you're looking for doesn't exist.
       </Typography>
@@ -27,13 +26,13 @@ function NotFound() {
         sx={{
           width: "200px",
           fontWeight: 700,
-          color: "white",
+          color: "#A8A8A8",
           mx: "auto",
           my: "auto",
-          bgcolor: red[300],
+          bgcolor: "#3A86FF",
           borderRadius: 3,
           ":hover": {
-            bgcolor: red.A400,
+            bgcolor: "#E5E5E5",
           },
         }}
       >

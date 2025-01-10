@@ -11,13 +11,13 @@ function CustomizedInput(props: Props) {
     <TextField
       margin="normal"
       slotProps={{
-        inputLabel: { style: { color: "white" } },
+        inputLabel: { style: { color: "#E5E5E5" } },
         input: {
           style: {
             width: "400px",
             borderRadius: 10,
             fontSize: 20,
-            color: "white",
+            color: "#A8A8A8",
           },
         },
       }}

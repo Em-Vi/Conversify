@@ -9,18 +9,17 @@ const Footer = () => {
           padding: 20,
           minHeight: "20vh",
           maxHeight: "30vh",
-          marginTop: 60,
         }}
       >
-        <p style={{ fontSize: "30px", textAlign: "center",padding: "20px" }}>
-          Built By
+        <p style={{ fontSize: "30px", textAlign: "center"}}>
+          Built and Developed By
           <span>
             <Link
-              style={{ color: "white" }}
+              style={{ color: "#E5E5E5" }}
               className="nav-link"
               to={"https://github.com/Em-Vi"}
             >
-              EmVi
+            EmVi
             </Link>
           </span>
         </p>
