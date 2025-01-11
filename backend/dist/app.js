@@ -9,7 +9,7 @@ import cors from "cors";
 //middlewares
 // cors for interconnection between servers
 // credentials true for passing cookies
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://conversify-omega.vercel.app", credentials: true })); // Replce with your frontend url or localhost:5173
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use("/api/v1", appRouter);
