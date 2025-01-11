@@ -35,7 +35,12 @@ export const checkAuthStatus = async () => {
 
 // sends user message
 export const sendchatRequest = async (message:string) =>{
-    const res = await axios.post("/chat/new", {message})
+    const res = await axios.post("/chat/new", {message}, {
+        withCredentials: true,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
     if (res.status!==200){
         throw new Error("Unable to send chat")
     }
