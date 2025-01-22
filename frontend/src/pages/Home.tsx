@@ -12,6 +12,7 @@ const Home = () => {
           flexDirection: "column",
           alignItems: "center",
           mx: "auto",
+          height: "100px"
         }}
       >
         <Box sx={{ textAlign: "center"}}>
@@ -33,7 +34,7 @@ const Home = () => {
           style={{ width: "200px", margin: "auto" }}
         />
         <Box sx={{ display: "flex", width: "100%", mx: "auto", justifyContent:"center" }}>
-          <Typography sx={{fontSize:100, textTransform:"uppercase",textAlign:"center",color:"#E5E5E5",fontFamily:"sans-serif"}}>
+          <Typography sx={{fontSize:{md: 100, xs: 50, sm:50}, textTransform:"uppercase",textAlign:"center",color:"#E5E5E5",fontFamily:"sans-serif"}}>
             {"Conversify"}
           </Typography>
         </Box>
