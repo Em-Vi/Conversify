@@ -39,7 +39,7 @@ export const userLogin = async (
     // create token and store cookies
     // These are attributes of cookies btw
     res.clearCookie(COOKIE_NAME, {
-      domain: "localhost",
+      
       httpOnly: true,
       signed: true,
       path: "/",
@@ -52,7 +52,7 @@ export const userLogin = async (
 
     res.cookie(COOKIE_NAME, token, {
       path: "/",
-      domain: "localhost",
+      
       expires,
       httpOnly: true,
       signed: true,
@@ -108,7 +108,7 @@ export const userSignup = async (
     // Clear exisitng cookies
 
     res.clearCookie(COOKIE_NAME, {
-      domain: "localhost",
+      
       httpOnly: true,
       signed: true,
       path: "/",
@@ -123,7 +123,7 @@ export const userSignup = async (
 
     res.cookie(COOKIE_NAME, token, {
       path: "/",
-      domain: "localhost",
+      
       expires,
       httpOnly: true,
       signed: true,
@@ -155,7 +155,7 @@ export const userLogout = async (
 
     // Clear cookie when logout
     res.clearCookie(COOKIE_NAME, {
-      domain: "localhost",
+      
       httpOnly: true,
       signed: true,
       path: "/",
