@@ -30,7 +30,7 @@ export const userLogin = async (req, res, next) => {
         res.clearCookie(COOKIE_NAME, {
             sameSite: "None",
             httpOnly: true,
-            signed: true, secure: true
+            signed: true, secure: true,
             path: "/",
         });
         const token = createToken(user._id.toString(), user.email, "7d");
@@ -41,7 +41,7 @@ export const userLogin = async (req, res, next) => {
             sameSite: "None",
             expires,
             httpOnly: true,
-            signed: true, secure: true
+            signed: true, secure: true,
         });
         return res
             .status(200)
@@ -86,7 +86,7 @@ export const userSignup = async (req, res, next) => {
         res.clearCookie(COOKIE_NAME, {
             sameSite: "None",
             httpOnly: true,
-            signed: true, secure: true
+            signed: true, secure: true,
             path: "/",
         });
         const token = createToken(user._id.toString(), user.email, "7d");
@@ -98,7 +98,7 @@ export const userSignup = async (req, res, next) => {
             sameSite: "None",
             expires,
             httpOnly: true,
-            signed: true, secure: true
+            signed: true, secure: true,
         });
         return res
             .status(201)
@@ -123,7 +123,7 @@ export const userLogout = async (req, res, next) => {
         res.clearCookie(COOKIE_NAME, {
             sameSite: "None",
             httpOnly: true,
-            signed: true, secure: true
+            signed: true, secure: true,
             path: "/",
         });
         return res

@@ -41,7 +41,7 @@ export const userLogin = async (
     res.clearCookie(COOKIE_NAME, {
       sameSite: "None",
       httpOnly: true,
-      signed: true, secure: true
+      signed: true, secure: true,
       path: "/",
     });
 
@@ -55,7 +55,7 @@ export const userLogin = async (
       sameSite: "None",
       expires,
       httpOnly: true,
-      signed: true, secure: true
+      signed: true, secure: true,
     });
 
     return res
@@ -110,7 +110,7 @@ export const userSignup = async (
     res.clearCookie(COOKIE_NAME, {
       sameSite: "None",
       httpOnly: true,
-      signed: true, secure: true
+      signed: true, secure: true,
       path: "/",
     });
 
@@ -126,7 +126,7 @@ export const userSignup = async (
       sameSite: "None",
       expires,
       httpOnly: true,
-      signed: true, secure: true
+      signed: true, secure: true,
     });
 
     return res
@@ -157,7 +157,7 @@ export const userLogout = async (
     res.clearCookie(COOKIE_NAME, {
       sameSite: "None",
       httpOnly: true,
-      signed: true, secure: true
+      signed: true, secure: true,
       path: "/",
     });
 
