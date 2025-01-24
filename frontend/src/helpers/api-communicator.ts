@@ -64,7 +64,6 @@ export const deleteUserChats = async () =>{
         throw new Error("Unable to clear chat data")
     }
     const data = await res.data
-    console.log("here")
     return data
 }
 // from authcontext
