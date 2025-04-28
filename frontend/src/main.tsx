@@ -8,7 +8,7 @@ import { AuthProvider } from './context/AuthContext.tsx'
 import axios from 'axios'
 import { Toaster } from 'react-hot-toast'
 
-axios.defaults.baseURL = "http://localhost:5000/api/v1" //  replace with your backend url or localhost:5000/api/v1
+axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1` //  replace with your backend url or localhost:5000/api/v1
 axios.defaults.withCredentials = true;
 
 // THeme for app content

@@ -11,13 +11,9 @@ import cors from "cors"
 // cors for interconnection between servers
 // credentials true for passing cookies
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://conversify-omega.vercel.app",
-    "https://conversify-anj27rdse-musthafa-vs-projects.vercel.app"
-  ],
+  origin:  process.env.FRONTEND_URL || "http://localhost:5173",
   credentials: true
-})) //Replace with your frontend URL or localhost:5173
+})) 
 app.use(express.json())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use("/api/v1",appRouter)
