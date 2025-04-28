@@ -12,6 +12,7 @@ import cors from "cors"
 // credentials true for passing cookies
 app.use(cors({
   origin: [
+    "http://localhost:5173",
     "https://conversify-omega.vercel.app",
     "https://conversify-anj27rdse-musthafa-vs-projects.vercel.app"
   ],
